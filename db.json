@@ -1,0 +1,49 @@
+{
+  "agendamentos": [
+    {
+      "id": 1,
+      "clienteNome": "Carlos Eduardo Souza",
+      "servico": "Corte + Barba",
+      "data": "2026-05-28",
+      "hora": "09:00",
+      "barbeiro": "João",
+      "status": "confirmado"
+    },
+    {
+      "id": 2,
+      "clienteNome": "Marcos Antônio Lima",
+      "servico": "Corte Degradê",
+      "data": "2026-05-28",
+      "hora": "10:00",
+      "barbeiro": "Rafael",
+      "status": "pendente"
+    },
+    {
+      "id": 3,
+      "clienteNome": "Felipe Rodrigues",
+      "servico": "Barba",
+      "data": "2026-05-28",
+      "hora": "11:00",
+      "barbeiro": "João",
+      "status": "confirmado"
+    },
+    {
+      "id": 4,
+      "clienteNome": "Bruno Henrique Costa",
+      "servico": "Corte Simples",
+      "data": "2026-05-28",
+      "hora": "13:00",
+      "barbeiro": "Marcos",
+      "status": "cancelado"
+    },
+    {
+      "id": 5,
+      "clienteNome": "Diego Ferreira",
+      "servico": "Corte + Barba",
+      "data": "2026-05-28",
+      "hora": "14:00",
+      "barbeiro": "Rafael",
+      "status": "pendente"
+    }
+  ]
+}
