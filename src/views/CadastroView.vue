@@ -1,5 +1,5 @@
 <template>
-    <!-- TODO [CRITÉRIO 11 e 12]:
+  <!-- TODO [CRITÉRIO 11 e 12]:
       Monte o formulário de cadastro com os campos:
         - clienteNome (text)
         - servico (text)
@@ -11,15 +11,75 @@
       https://getbootstrap.com/docs/5.3/forms/overview/#overview
       https://vuejs.org/guide/essentials/forms.html#basic-usage
     -->
+  <form>
+    //não esta aparecendo o formulario AAA
+    <div class="mb-3">
+      <label for="nomeCliente" class="form-label"
+        >Digite o nome do cliente:
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        id="nomeCliente"
+        aria-describedby="emailHelp"
+        v-model="formulario.clienteNome"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="servico" class="form-label">Serviço</label>
+      <input
+        type="text"
+        class="form-control"
+        id="servico"
+        v-model="formulario.servico"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="data" class="form-label">Data</label>
+      <input
+        type="date"
+        class="form-control"
+        id="data"
+        v-model="formulario.data"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="hora" class="form-label">Hora</label>
+      <input
+        type="time"
+        class="form-control"
+        id="hora"
+        v-model="formulario.hora"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="barbeiro" class="form-label">Barbeiro</label>
+      <input
+        type="text"
+        class="form-control"
+        id="barbeiro"
+        v-model="formulario.barbeiro"
+      />
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      @click.prevent="cadastrarAgendamento"
+    >
+      salvar
+    </button>
+  </form>
 </template>
 
 <script setup lang="ts">
-
 // Importar criarAgendamento do agendamentoService
+import { criarAgendamento } from "../services/agendamentoService";
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+import type Agendamento from "../interfaces/Agendamento";
+
 // TODO [CRITÉRIO 3 e 11]:
 // Crie um objeto reativo (ref) com os campos do formulário de cadastro
-
-
 
 // TODO [CRITÉRIO 10]:
 // Implemente a função "cadastrarAgendamento".
@@ -28,7 +88,9 @@
 // 2. Adicionar o agendamento retornado pela API à lista local
 // 3. Limpar os campos do formulário após o envio
 // 4. Redirecionar para a lista de agendamentos
+
 async function cadastrarAgendamento() {
-  // Implemente aqui
+  const agendamentoCriado = await criarAgendamento(formulario.value);
+  router.push("/");
 }
 </script>

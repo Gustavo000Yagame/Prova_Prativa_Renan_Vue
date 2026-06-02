@@ -9,23 +9,46 @@
     Adicione um botão "Ver detalhes" que navega para /agendamento/:id
     https://getbootstrap.com/docs/5.3/components/card/#titles-text-and-links
     https://router.vuejs.org/guide/#App-vue
+
   -->
+
+  <div class="card" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">Agendamento</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+      <p class="card-text">{{ agendamento.clienteNome }}</p>
+      <p class="card-text">{{ agendamento.servico }}</p>
+      <p class="card-text">{{ agendamento.data }}</p>
+      <p class="card-text">{{ agendamento.hora }}</p>
+      <p class="card-text">{{ agendamento.barbeiro }}</p>
+      <router-link
+        :to="`/agendamento/${agendamento.id}`"
+        class="btn btn-primary"
+      >
+        Ver detalhes
+      </router-link>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import type Agendamento from '../interfaces/Agendamento'
-import { useRouter } from 'vue-router'
+import type Agendamento from "../interfaces/Agendamento";
+import { useRouter } from "vue-router";
 
 // TODO [CRITÉRIO 5]:
 // Declare a prop "agendamento" do tipo Agendamento.
 // Ela será passada pelo componente pai (HomeView) para este componente.
 
-const router = useRouter()
+const props = defineProps<{
+  agendamento: Agendamento;
+}>();
+
+const router = useRouter();
 
 // TODO [CRITÉRIO 6 e 7]:
 // Implemente a função "verDetalhes" que navega para a rota /agendamento/:id
 // usando o id do agendamento recebido via prop.
 function verDetalhes() {
-  // Implemente aqui
+  router.push(`/agendamento/${props.agendamento.id}`);
 }
 </script>

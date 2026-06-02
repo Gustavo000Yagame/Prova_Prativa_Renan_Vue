@@ -6,5 +6,9 @@
 // Consulte o README para ver todos os campos e seus tipos.
 
 export default interface Agendamento {
-  // Implemente aqui
+  id: number;
+  nome: string;
+  email: string;
+  data: string;
+  status: "confirmado" | "pendente" | "cancelado";
 }

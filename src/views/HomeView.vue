@@ -7,6 +7,10 @@
         https://router.vuejs.org/guide/#App-vue
     -->
 
+    <router-link to="/cadastro" class="btn btn-primary mb-4">
+      + Novo Agendamento
+    </router-link>
+
     <!-- TODO [CRITÉRIO 4]:
       Use v-for para percorrer a lista de agendamentos e renderizar
       um componente AgendamentoCard para cada item.
@@ -15,25 +19,34 @@
       https://vuejs.org/guide/essentials/list.html#maintaining-state-with-key
     -->
 
+    <AgendamentoCard
+      v-for="agendamento in agendamentos"
+      :key="agendamento.id"
+      :agendamento="agendamento"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import AgendamentoCard from '../components/AgendamentoCard.vue'
-import type Agendamento from '../interfaces/Agendamento'
-import { listarAgendamentos, criarAgendamento } from '../services/agendamentoService'
+import { ref, onMounted } from "vue";
+import AgendamentoCard from "../components/AgendamentoCard.vue";
+import type Agendamento from "../interfaces/Agendamento";
+import {
+  listarAgendamentos,
+  criarAgendamento,
+} from "../services/agendamentoService";
 
 // TODO [CRITÉRIO 3]:
 // Crie uma variável reativa (ref) para armazenar a lista de agendamentos.
-
+const agendamentos = ref<Agendamento[]>([]);
 
 // TODO [CRITÉRIO 3 e 8]:
 // Use onMounted para chamar a função que busca os agendamentos da API
 // assim que a tela for carregada.
 async function buscarAgendamentos() {
-    
+  const agendamentosRetornados = await listarAgendamentos();
+  agendamentos.value = agendamentosRetornados;
 }
 
-onMounted(buscarAgendamentos)
+onMounted(buscarAgendamentos);
 </script>
