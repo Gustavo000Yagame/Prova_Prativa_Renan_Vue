@@ -1,7 +1,7 @@
 {
   "agendamentos": [
     {
-      "id": 1,
+      "id": "1",
       "clienteNome": "Carlos Eduardo Souza",
       "servico": "Corte + Barba",
       "data": "2026-05-28",
@@ -10,7 +10,7 @@
       "status": "confirmado"
     },
     {
-      "id": 2,
+      "id": "2",
       "clienteNome": "Marcos Antônio Lima",
       "servico": "Corte Degradê",
       "data": "2026-05-28",
@@ -19,7 +19,7 @@
       "status": "pendente"
     },
     {
-      "id": 3,
+      "id": "3",
       "clienteNome": "Felipe Rodrigues",
       "servico": "Barba",
       "data": "2026-05-28",
@@ -28,7 +28,7 @@
       "status": "confirmado"
     },
     {
-      "id": 4,
+      "id": "4",
       "clienteNome": "Bruno Henrique Costa",
       "servico": "Corte Simples",
       "data": "2026-05-28",
@@ -37,13 +37,86 @@
       "status": "cancelado"
     },
     {
-      "id": 5,
+      "id": "5",
       "clienteNome": "Diego Ferreira",
       "servico": "Corte + Barba",
       "data": "2026-05-28",
       "hora": "14:00",
       "barbeiro": "Rafael",
       "status": "pendente"
+    },
+    {
+      "id": "6",
+      "clienteNome": "Gustavo cardoso guauauau",
+      "servico": "bigodao",
+      "data": "2026-06-03",
+      "hora": "23:49",
+      "barbeiro": "GianLuca rosso silveira",
+      "status": "pendente"
+    },
+    {
+      "id": "7",
+      "clienteNome": "Gustavo cardoso guauauau",
+      "servico": "bigodao",
+      "data": "2026-06-03",
+      "hora": "23:49",
+      "barbeiro": "GianLuca rosso silveira",
+      "status": "pendente"
+    },
+    {
+      "id": "tiSGFMUJ4Po",
+      "clienteNome": "Gustavo cardoso guauauau",
+      "servico": "bigodao",
+      "data": "2026-06-03",
+      "hora": "23:49",
+      "barbeiro": "GianLuca rosso silveira",
+      "status": "pendente"
+    },
+    {
+      "id": "cvqjz4H1vt8",
+      "clienteNome": "",
+      "servico": "",
+      "data": "",
+      "hora": "",
+      "barbeiro": "",
+      "status": "pendente"
+    },
+    {
+      "id": "9w_eHACNUug",
+      "clienteNome": "qgqgqg",
+      "servico": "wgqgqw",
+      "data": "2026-06-28",
+      "hora": "22:49",
+      "barbeiro": "wfwf",
+      "status": "pendente"
+    },
+    {
+      "id": "3v8L6FvN1wM",
+      "clienteNome": "",
+      "servico": "",
+      "data": "",
+      "hora": "",
+      "barbeiro": "",
+      "status": "pendente"
+    },
+    {
+      "id": "SyVn-vFtxHw",
+      "clienteNome": "Angry birds",
+      "servico": "67",
+      "data": "2026-06-17",
+      "hora": "01:09",
+      "barbeiro": "GianLuca rosso silveira",
+      "status": "confirmado"
+    },
+    {
+      "id": "teXVnBQsBiw",
+      "clienteNome": "Passaro pistola",
+      "servico": "voo",
+      "data": "2026-06-20",
+      "hora": "01:23",
+      "barbeiro": "Marcos",
+      "status": "pendente"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

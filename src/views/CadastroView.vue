@@ -11,8 +11,13 @@
       https://getbootstrap.com/docs/5.3/forms/overview/#overview
       https://vuejs.org/guide/essentials/forms.html#basic-usage
     -->
+
+  <!-- 
+
+    Não ficou tao bonito mais pelomenos esta fucionando
+
+    -->
   <form>
-    //não esta aparecendo o formulario AAA
     <div class="mb-3">
       <label for="nomeCliente" class="form-label"
         >Digite o nome do cliente:
@@ -69,6 +74,12 @@
       salvar
     </button>
   </form>
+
+  <div class="mt-4">
+    <router-link to="/" class="btn btn-secondary"
+      >Voltar para lista</router-link
+    >
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -80,6 +91,18 @@ import type Agendamento from "../interfaces/Agendamento";
 
 // TODO [CRITÉRIO 3 e 11]:
 // Crie um objeto reativo (ref) com os campos do formulário de cadastro
+
+const formulario = ref<Agendamento>({
+  id: 0,
+  clienteNome: "",
+  servico: "",
+  data: "",
+  hora: "",
+  barbeiro: "",
+  status: "pendente",
+});
+
+const router = useRouter();
 
 // TODO [CRITÉRIO 10]:
 // Implemente a função "cadastrarAgendamento".

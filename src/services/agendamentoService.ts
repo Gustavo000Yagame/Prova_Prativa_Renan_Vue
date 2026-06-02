@@ -6,7 +6,7 @@ import { createRouter, createWebHistory } from "vue-router";
 const API_URL = "http://localhost:3000";
 
 const http = axios.create({
-  baseURL: "http://localhost:3001",
+  baseURL: API_URL,
 });
 
 // TODO [CRITÉRIO 8]:

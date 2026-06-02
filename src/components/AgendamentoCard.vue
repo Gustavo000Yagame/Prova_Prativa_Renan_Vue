@@ -15,12 +15,22 @@
   <div class="card" style="width: 18rem">
     <div class="card-body">
       <h5 class="card-title">Agendamento</h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
       <p class="card-text">{{ agendamento.clienteNome }}</p>
       <p class="card-text">{{ agendamento.servico }}</p>
       <p class="card-text">{{ agendamento.data }}</p>
       <p class="card-text">{{ agendamento.hora }}</p>
       <p class="card-text">{{ agendamento.barbeiro }}</p>
+      <span
+        class="badge"
+        :class="{
+          'bg-success': agendamento.status === 'confirmado',
+          'bg-warning': agendamento.status === 'pendente',
+          'bg-danger': agendamento.status === 'cancelado',
+        }"
+      >
+        {{ agendamento.status }}
+      </span>
+      <br />
       <router-link
         :to="`/agendamento/${agendamento.id}`"
         class="btn btn-primary"

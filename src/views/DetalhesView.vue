@@ -14,7 +14,7 @@
         <p class="card-text">Hora: {{ agendamento.hora }}</p>
         <p class="card-text">Barbeiro: {{ agendamento.barbeiro }}</p>
         <p class="card-text">Status: {{ agendamento.status }}</p>
-        <router-link to="/" class="btn btn-secondary">Voltarr</router-link>
+        <router-link to="/" class="btn btn-secondary">Voltar</router-link>
       </div>
     </div>
   </div>
@@ -45,7 +45,7 @@ const id = route.params.id;
 async function buscarAgendamento() {
   const id = route.params.id;
   if (id) {
-    const agendamentoRetornado = await buscarAgendamentoPorId(Number(id));
+    const agendamentoRetornado = await buscarAgendamentoPorId(id);
     agendamento.value = agendamentoRetornado;
   }
 }
